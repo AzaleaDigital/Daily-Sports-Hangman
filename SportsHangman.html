@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Knock-off</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .game-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #word-display {
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        #guess-input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Wordle Knock-off</h1>
+        <!-- Display the current word and guessed letters -->
+        <div id="word-display">_ _ _ _ _</div>
+        <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
+        <button onclick="document.getElementById('result').innerText = 'Game logic goes here'">Guess</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
