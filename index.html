@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hangman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .league-container {
+            text-align: center;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .hangman-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="league-container" onclick="showHangman('NFL')">
+        <img src="nfl_logo.png" alt="NFL Logo" width="100" height="100">
+    </div>
+    
+    <!-- Repeat the above container for other leagues -->
+
+    <div id="hangman-popup" class="hangman-popup">
+        <h2>Guess the Athlete's Name</h2>
+        <div id="word-display"></div>
+        <input type="text" id="guess-input" placeholder="Enter a letter">
+        <button onclick="makeGuess()">Guess</button>
+        <button onclick="guessEntireName()">Guess Entire Name</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
